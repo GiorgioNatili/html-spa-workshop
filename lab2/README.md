@@ -1,4 +1,4 @@
 Lab 2
 =====
-Open the previously created app and check which build system is integrated; try to integrate a different one and compare the sizes of the productionized source code.
+Using the previously created app, add jquery as a dependency and  create a left navigation menu that when clicked is able to render different views.
 

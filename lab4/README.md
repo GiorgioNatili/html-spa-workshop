@@ -1,4 +1,5 @@
 Lab 4
 ======
-Using polymer create a web component able to render a random number every time the user click on it.
+Integrate babel in the build workflow and define two ES6 modules. The first module expose a function to calculate a random fibonacci number, the second one handle a click event and print a random fibonacci number on the screen. 
+
 

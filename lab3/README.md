@@ -1,5 +1,3 @@
 Lab 3
-======
-Integrate babel in the build workflow and define two ES6 modules. The first module expose a function to calculate a random fibonacci number, the second one handle a click event and print a random fibonacci number on the screen. 
-
-
+=====
+Using the help embedded in your command line build the current app in order to have the code productionized and ready to be publish.
