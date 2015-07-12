@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title Lab 2
+    link(rel='stylesheet', href='/stylesheets/style.css' + cachebust)
+    //TODO: insert bootstrap css file here
+    
+    if reload
+      script(src='/socket.io/socket.io.js')
+      script(src='/javascripts/reload-client.js')
+
+    if optimize
+      script(src='/javascripts/main-built.js')
+    else
+      //TODO: insert bootstrap js file here
+      script(src='/javascripts/vendor/requirejs/require.js', data-main='/javascripts/main.js')
+
+  body
+    block content
