@@ -1,15 +1,9 @@
-define(['jquery', 'templates'], function($, templates) {
-  var ExampleView = (function() {
+define(["jquery"], function($) {
+  "use strict";
 
-    function ExampleView() {}
+  var render = function(element) {
+    $(element).append("<div class='name'>This is a sample Mimosa web app</div>");
+  };
 
-    ExampleView.prototype.render = function(element) {
-      $(element).append(templates.example({name: 'Handlebars',css: 'pure CSS'}));
-      $(element).append(templates['another-example']({name: 'Handlebars'}));
-    };
-
-    return ExampleView;
-
-  })();
-  return ExampleView;
+  return render;
 });

@@ -1,18 +1,26 @@
 exports.config = {
-  "modules": [
+  modules: [
     "copy",
-    "jshint",
-    "csslint",
+    "stream-copy",
+    "server",
+    "live-reload",
     "require",
     "minify-js",
     "minify-css",
     "bower",
-    "handlebars"
+    "autoprefixer",
+    "csslint",
+    "jshint",
+    "require-lint",
+    "minify-svg",
+    "minify-html",
+    "minify-img",
+    "testem-require",
+    "web-package"
   ],
-  "server": {
-    "views": {
-      "compileWith": "html",
-      "extension": "html"
+  testemRequire: {
+    mochaSetup: {
+      globals:["jQuery*"]
     }
   }
 }
