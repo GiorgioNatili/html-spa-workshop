@@ -6,22 +6,261 @@ html
     title Building cross-platform apps with HTML5
 
     link(rel='stylesheet', type='text/css', href='build/build.css')
+  
+    style.
+      .jupiter {
+        background-image: url('images/flares.gif')
+      }
+      .mimosa {
+        background-image: url('images/mimosa.jpg')
+      }
+      .yeoman {
+        background-image: url('images/yeoman.jpg')
+      }
+      .brunch {
+        background-image: url('images/brunch.jpg')
+      }
+      .slush {
+        background-image: url('images/slush.jpg')
+      }
+      pre {
+        border: 1px solid gray;
+      }
+
+
 
   body(class='nebula')
 
     article
 
-      section
+      section(data-bespoke-backdrop='jupiter')
         h2 Building cross-platform apps with HTML5
         h3 Giorgio Natili
         h4 @giorgionatili
       section
-        h2 Keyboard Interaction
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-keys">bespoke-keys</a>
+        h2 Agenda
+        br
+        ul.bullet
+          li App Scaffolding 
+          li Dependencies Management
+          li Reusable CSS
+          li ECMA6
+          li Web Components
+          li Routing
+          li Testing
+          li Deploying
+      section.emphatic-text(data-bespoke-backdrop='emphatic')
+        h2 App Scaffolding
+      section(data-bespoke-backdrop='yeoman')
+        h2 yeoman
+        h3 Kickstart tool that enforces best practices and TDD
+      section
+        h2 Install yeoman
+        br
+        ul.bullet
+          li install brew
+          li install <i>node</i> and <i>npm</i>
+            pre.bullet
+              code.language-bash.
+                $ brew install node
+          li install <i>yeoman</i> through <i>npm</i>
+            pre.bullet
+              code.language-bash.
+                $ npm install yo -g
+      section
+        h2 Using yeoman (yo!)
+        br
+        ul.bullet
+          li just type 
+            pre
+              code.language-bash.
+                $ yo
+          li and then
+            ul.bullet
+              li run a generator
+              li update a generator
+              li get some help
+              li exit
+      section
+        h2 A Generator?!?
+        br.bullet
+        p.bullet
+          img(src='images/wtf.gif')
+      section
+        h2 Yeoman Generators
+        br.bullet
+        h3.bullet Receipes for modern, modular, testable and scalable web apps
+        h4.bullet Among the others: angular, webapp, h5bp, ionic, react, express, gulp-webapp, etc.
+       section
+        h2 Create a simple HTML5 app
+        br
+        h4 Explore the options <br> offered from a generator 
+      section(data-bespoke-backdrop='mimosa')
+        h2 Mimosa
+        h3 A toolkit for modern browser development
 
       section
-        h2 Touch Interaction
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-touch">bespoke-touch</a>
+        h2 What includes
+        br
+        ul.bullet
+          li JS Transpiler
+          li CSS Pre-processors
+          li HTML Micro-templaters
+          li Minification
+          li AMD/RequireJS Support
+
+      section
+        h2 Install Mimosa
+        br.bullet
+        p.bullet as a <i>npm</i> module
+          pre.bullet
+            code.language-bash.
+              $ npm install mimosa -g
+      section
+        h2 Out of the box transpiler support
+        br.bullet
+        h3.bullet Transpiling is based on file extension: CoffeeScript compiler = .coffee, LiveScript compiler = .ls, etc.
+        p.bullet <i>(The same rule applies also to CSS files)</i>
+
+      section
+        h2 Micro Templates
+        br.bullet
+        p.bullet Mimosa offers several HTML micro templates engines:
+        ul.bullet
+          li Dust
+          li Embedded CoffeeScript Templates (<u>ECO</u>)
+          li Embedded JavaScript Templates (<u>EJS</u>)
+          li Handlebars
+          li Hogan
+          li Jade
+          li Etc.
+      section
+        h2 Dependency Management
+        br.bullet
+        h3.bullet Mimosa works with Bower to install your dependencies where they belong.
+        h3.bullet It keeps track of your Bower situation to rerun Bower installs when you need them
+      section
+        h2 AMD Support
+        br.bullet
+        h3.bullet Mimosa fully support AMD through requireJS, infact:
+        ul.bullet
+          li AMD Path Verification
+          li Notify when AMD paths are broken or wrong
+          li Handle shims, maps
+          li Nested <u>requires</u> and <u>defines</u>
+          li Detect circular dependencies
+          li Manage common config for multiple modules
+      section
+        h2 Hint & Lint
+        br.bullet
+        h3.bullet JavaScript files are hited and CSS files are linted (configurable)
+
+      section
+        h2 Sources Mapping
+        br.bullet
+        h3.bullet Source mapping is fully supported, even more it's possible to add breakpoints in .coffe files and use the standard debuggin tools
+  
+      section
+        h2 Create a Web App with Mimosa
+        br.bullet
+        pre.bullet
+          code.language-bash.
+            $ mimosa skel:new webapp hello-app-mimosa
+        p.bullet
+          img(src='images/mimosa-run.png' style='width:400px')
+
+      section(data-bespoke-backdrop='brunch')
+        h2 Brunch
+        h3 An ultra-fast HTML5 build tool
+      
+      section
+        h2 What it does
+        br.bullet
+        ul.bullet
+          li Compiles scripts/stylesheets/templates
+          li Lints them
+          li Wraps in Common.js or AMD modules (optional)
+          li Concatenates & minifies
+          li Generates source maps
+          li Copies and optimizes image assets
+          li Watches for file changes
+          li Notifies you of errors via console or notifications
+          li Auto reload (plugin)
+
+      section
+        h2 It sounds like mimosa
+        br
+        img(src='images/mumble.gif')
+
+      section
+        h2 Few important differences
+        br
+        ul.bullet
+          li Brunch preceeds mimosa by 5-6 months
+          li as far as today Brunch seems more active on github
+          li Mimosa offers seprate compile phases for server and client side code
+          li Mimosa offers <i>CoffeeScript</i> breakpoints
+          li Mimosa allows to override configuration through <u>profiles</u>
+      
+      section
+        h2 What's about Grunt and Gulp?
+        br.bullet
+        h3.bullet <u>Grunt</u> is merely a set of tasks that would be executed one after another
+        h3.bullet <u>Gulp</u> doesn't make temporary files, that's why it's a "streaming build system"
+        h3.bullet <u>Brunch</u> is focused on speed
+
+      section
+        h2 Getting Started
+        br.bullet
+        pre.bullet
+          code.language-bash.
+            $ npm install -g brunch
+            $ brunch new [skeleton url] [output directory]
+            $ brunch watch --server
+
+      section
+        h2 A huge set of Skeletons
+        br.bullet
+        p.bullet Between the others: ember, jade, angular, chaplin, marionette, cordova, foundation, etc.
+        p.bullet A complete list is available <a href='http://brunch.io/skeletons.html' target='_blank'>here</a>.
+      section
+        h2 Create an HTML5 static page with Brunch
+        br.bullet
+        pre.bullet
+          code.language-bash.
+            $ brunch new gh:dobromir-hristov/brunch-with-whey-protein
+      section(data-bespoke-backdrop='slush')
+        h2 Slush
+        h3 The streaming scaffolding system
+      section
+        h2 Why is different?
+        br.bullet
+        h3.bullet It uses <i>Gulp</i>, it doesn't offer anything out of the box and for this reason is pretty light
+        p(style='font-size:11px').bullet (<i>Highly recommended if you want to have control of every single depndence that you add to your project</i>)
+      section
+        h2 Slush Generators
+        br.bullet
+        h3.bullet A huge list that includes: phonegap, go, Electron, angular, ember, backbone, express, web components, h5bp, ng-next, browserify, bootstrap, etc.
+        p.bullet An omnicomprehensive list of slush generators are available <a href='http://slushjs.github.io/generators' target='_blank'>here</a>
+        p(style='font-size:11px').bullet (<i>Slush generators can be installed locally!</i>)
+      section
+        h2 Getting Started
+        br.bullet
+        h4.bullet Install as an npm module
+          pre.bullet
+            code.language-bash.
+              $ npm install slush -g
+        h4.bullet Use only the tasks you need from a generator
+          pre.bullet
+            code.language-bash.
+              $ slush &lt;generator&gt;[:&lt;tasks&gt;] [&lt;args&gt;]
+
+
+        
+      section(data-bespoke-backdrop='confused')
+        h2 How to decided the which is the right tool?
+        br
+        img(src='images/confused.gif')
 
       section
         h2 Responsive Slides
