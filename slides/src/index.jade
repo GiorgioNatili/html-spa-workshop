@@ -23,6 +23,16 @@ html
       .slush {
         background-image: url('images/slush.jpg')
       }
+      .npm {
+        background-image: url('images/npm.png')
+      }
+      .bower {
+        background-image: url('images/bower.jpg')
+      }
+      .jspm {
+        background-image: url('images/jspm.png')
+      }
+
       pre {
         border: 1px solid gray;
       }
@@ -254,14 +264,159 @@ html
           pre.bullet
             code.language-bash.
               $ slush &lt;generator&gt;[:&lt;tasks&gt;] [&lt;args&gt;]
-
-
-        
-      section(data-bespoke-backdrop='confused')
+ 
+      section
         h2 How to decided the which is the right tool?
         br
         img(src='images/confused.gif')
+      
+      section
+        h2 With common sense and deeply analyzing your requiremnts
+        br.bullet
+        ul.bullet
+          li Do you have huge dependecies tree?
+          li Is the team big and distributed? 
+          li Is the project enterprise?
+          li Are you already using tools like <i>ember-cli</i>?
+          li Do you already have a test suite?
+          li How much active is the project community?
+          
+      section.emphatic-text(data-bespoke-backdrop='emphatic')
+        h2 Dependencies Management
+      
+      section(data-bespoke-backdrop='npm')
+        h2 NPM
+        h3 Installs, publishes and manages node programs
+      
+      section
+        h2 Node Package Manager
+        br.bullet
+        ul.bullet
+          li Originally designed only for server side dependencies
+          li Nested dependencies (each module has its own dependencies tree)
+          li Can run build scripts and register utilities to your CLI
 
+      section
+        h2 Basic Commands
+        br
+        ul.bullet
+          li 
+            code.language-bash.
+              $ npm install [--save,--save-dev,--save-optional]
+          li 
+            code.language-bash.
+              $ npm update &lt;module-name&gt;
+          li 
+            code.language-bash.
+              $ npm prune 
+          li 
+            code.language-bash.
+              $ npm uninstall  &lt;module-name&gt;
+          li
+            code.language-bash.
+              $ npm shrinkwrap
+      section
+        h2 The package.json file
+        br.bullet
+        pre.bullet
+          code.language-javascript.
+            {
+              "name": "test",
+              "version": "1.0.0",
+              "description": "Test project",
+              "main": "index.js",
+              "scripts": {
+                "test": "echo \"Error: no test specified\" && exit 1"
+              },
+              "author": "Giorgio Natili",
+              "license": "ISC"
+            }
+      section(data-bespoke-backdrop='bower')
+        h2 Bower
+        h3 A package manager for the web
+      section
+        h2 Bower
+        br
+        ul.bullet
+          li A npm module
+          li Used to search and install client side dependencies
+          li Based upon a flat dependency tree
+          li Built in order to automatically resolve version conflicts
+      section
+        h2 Basic Commands
+        br
+        ul.bullet
+          li 
+            code.language-bash.
+              $ bower init
+          li
+            code.language-bash.
+              $ bower install [--save,--save-dev]
+          li
+            code.language-bash.
+              $ bower cache [list,clean] &lt;package&gt;
+          li 
+            code.language-bash.
+              $ bower prune &lt;package&gt;
+          li
+            code.language-bash.
+              $ bower search
+          li
+            code.language-bash.
+              $ bower update  &lt;package&gt;
+      section
+        h2 It's not the same of npm!
+        br
+        img(src='images/shock.gif')
+      section
+        h2 But it's neither the best way
+        br
+        img(src='images/yesyes.gif')
+      section(data-bespoke-backdrop='jspm')
+        h2 JSPM
+        h3 Frictionless browser package management
+
+      section
+        h2 What is JSPM
+        br
+        ul.bullet
+          li It's a package manager for the <i>SystemJS </i>universal module loader
+          li Loads any module format such as ES6, AMD, CommonJS from any registry (github, npm, etc.)
+          li Uses a flat versioned dependency management tree
+          li Its main focus is front-end dependencies
+
+      section
+        h2 Basic Commands
+        br
+        ul.bullet
+          li 
+            code.language-bash.
+              $ jspm init
+          li
+            code.language-bash.
+              $ jspm install [npm:,githhub:]&lt;package&gt;
+          li
+            code.language-bash.
+              $ jspm run &lt;module&gt;
+          li
+            code.language-bash.
+              $ jspm bundle app/main main-bundle.js --inject
+        br
+        p(style='font-size: 14px;').bullet (<i>For a detailed guide about the jspm CLI refer to the <a href="https://github.com/jspm/jspm-cli">https://github.com/jspm/jspm-cli</a></i>)     
+      section
+        h2 Why is different from Bower
+        br
+        ul.bullet
+          li Bower has only one purpose-to download source files you need from the web to your hard disk
+          li Jspm is not only a module downloader, it manages dependency injection in your app
+          li Jspm offers out of the box <i>traceur</i> or <i>babel</i> to run <em>ES6</em>
+          li It suppors modules import<br>
+            code.language-javascript.
+              var $ = require('jquery'); // AMD-style import!! Magic!!
+      section.emphatic-text(data-bespoke-backdrop='emphatic')
+        h2 ECMA 6 
+      section
+        h2 Features Review
       section
         h2 Responsive Slides
         h3 Powered by <a href="https://github.com/markdalgleish/bespoke-scale">bespoke-scale</a>

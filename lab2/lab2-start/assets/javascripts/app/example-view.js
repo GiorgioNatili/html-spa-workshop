@@ -2,7 +2,7 @@ define(["jquery"], function($) {
   "use strict";
 
   var render = function(element) {
-  	//wire up click events here
+  	//TODO: Wire up click events here
   };
 
   return render;
