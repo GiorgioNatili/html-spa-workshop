@@ -694,52 +694,60 @@ html
         p.bullet Install this <a href="https://github.com/webcomponents/generator-element">https://github.com/webcomponents/generator-element</a> interesting <em>yeoman</em> generator...  
       section
         h3 Working on Lab 5
+        h6 Explore the world of custom tasg <a href="https://customelements.io/">https://customelements.io/</a>!
       section.emphatic-text(data-bespoke-backdrop='emphatic')
         h2 Routing
       section
-        h2 Responsive Slides
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-scale">bespoke-scale</a>
-
+        h2 Application Routing
+        br
+        ul.bullet
+          li Most times in a Single Page App (aka SPA), the appropriate resources are loaded when the URL changes
+          li The URL structure is used to specify which views should be rendered/loaded
+          li Its through the URL that a SPA understand which data have to be fetched from the server
       section
-        h2 Bullet List
+        h2 Application State
+        br.bullet
+        h3.bullet The application state is mostly persisted in the client through information fragments used by the server to rebuild tge actual state...
+      section
+        h2 Don't reinvent the wheel!
+        br
+        ul.bullet
+          li <a href="https://github.com/visionmedia/page.js">PageJS</a>
+          li <a href="https://github.com/flatiron/directo">Director</a>
+          li <a href="https://github.com/markdalgleish/bespoke-hash">Bespoke-hash</a>
+          li <a href="https://lhorie.github.io/mithril/">Mithril</a> <br />
+            p(style='font-size:14px') (ok, that's a micro framework it doesn't count!)
+      section
+        h2 PageJS
+        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-scale">bespoke-scale</a>
+      section
+        h2 Director
         h3.bullet Powered by <a href="https://github.com/markdalgleish/bespoke-bullets">bespoke-bullets</a>
         ul
           li Bullet 1
           li Bullet 2
           li Bullet 3
-
       section
-        h2 Syntax Highlighting
-        h3 Powered by <a href="http://twitter.com/LeaVerou">Lea Verou</a>'s <a href="https://github.com/LeaVerou/prism">Prism</a>
-        pre
-          code.language-javascript.
-            bespoke.from('article', [
-              classes(),
-              keys(),
-              touch(),
-              bullets('li, .bullet')
-            ]);
-
-      section(data-bespoke-hash='named-route')
-        h2 Named Route
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-hash">bespoke-hash</a>
-        p Look up! This route has been named with a <em>'data-bespoke-hash'</em> attribute.
-
+        h2 Isn't this interesting?
+        br
+        img(src='images/interesting.gif')
       section.emphatic-text(data-bespoke-backdrop='emphatic')
-        h2 Emphatic Slide!
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-backdrop">bespoke-backdrop</a>
-
+        h2 Conclusions
+      section(data-bespoke-hash='frameworks-are-not-evil')
+        br
+        h3 Using frameworks is not bad, understadning what's behind the sceene is a key point to get the most value from them...
       section
-        h2.bullet Just the beginning...
         br
-        ul
-          li Edit <a href="http://jade-lang.com/">Jade</a> markup in <em>'src/index.jade'</em>
-          li Edit <a href="http://learnboost.github.io/stylus/">Stylus</a> styles in <em>'src/styles/main.styl'</em>
-          li Edit JavaScript in <em>'src/scripts/main.js'</em>
+        h3 Preferring polyfills to frameworks it's possible to remove not needed code once a feature is supported by browsers....
+      section
         br
-        ul
-          li
-            strong Enjoy! :)
-            a(href='http://twitter.com/markdalgleish')  -@markdalgleish
+        h3 A technology should be used if it's the right tool to address a prouct needs not because it's our favourite tool...
+      section
+        h2 That's it
+        br
+        img(src='images/thanks.gif')
+        br
+        p Thanks so much!
+        p(style='font-size:16px;') @giorgionatili
 
     script(src='build/build.js')
