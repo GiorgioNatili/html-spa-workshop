@@ -84,7 +84,7 @@
       "test": "test"
     },
     "dependencies": {
-      "jquery": "github:components/jquery@^2.1.4"
+      "bootstrap": "github:twbs/bootstrap@^3.3.5"
     },
     "devDependencies": {
       "babel": "npm:babel-core@^5.1.13",

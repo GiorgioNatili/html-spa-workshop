@@ -1,10 +1,12 @@
-import jquery from 'jquery';
-//TODO: import Fib class
+import Fib from './fib';
 
-class App {
-	//TODO: add click handler here. Instantiate the Fib generator class
+let fib = new Fib();
+
+let textNode = document.createTextNode(fib.randomFib());
+document.body.appendChild(textNode);
+
+class app {
+	constructor() {
+		
+	}
 }
-
-$(function(){
-	//TODO: instantiate App class and click event here
-});
