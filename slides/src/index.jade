@@ -35,6 +35,7 @@ html
 
       pre {
         border: 1px solid gray;
+        padding: 0.5em !important;
       }
 
 
@@ -417,6 +418,162 @@ html
         h2 ECMA 6 
       section
         h2 Features Review
+      section
+        h2 The let Keyword
+        br.bullet
+        h3.bullet Declares a variable local to the block scope...
+        code.bullet.language-javascript.
+            var x = 1;
+            if(x < 10) {
+              let v = 1;
+              v = v + 21;
+              console.log(v);
+            }
+            console.log(v); //v is not defined>)
+      section
+        h2 The const Keyword
+        br.bullet
+        h3.bullet Declares a "variable" that once is set can't change...
+        code.bullet.language-javascript.
+          const username = 'Giorgio';
+          username = 'Jonathan'; // "username" is read-only
+      section
+        h2 Template Strings
+        br.bullet
+        h3.bullet Concatenates strings and variable wrapping variables in a ${} sign...
+        code.bullet.language-javascript.
+          let name = 'giorgio';
+          let email = 'me@webplatform.io';
+          console.log(`username ${name} and e-mail ${email}`);
+      section
+        h2 Arrow functions
+        br.bullet
+        h3.bullet It's a shorter form of a function that lexically binds the <em>this</em> value...
+        code.bullet.language-javascript.
+          (param1, param2, paramN) => { statements }
+          (param1, param2, paramN) => expression
+      section
+        h2 Variadic arguments and Default Values
+        br.bullet
+        h3.bullet Functions can be now defined to explicitly accept a vairable number of arguments and default values...
+        code.bullet.language-javascript.
+          function printAll(...names){
+            for (item of names) {
+              console.log(item);
+            }
+          }
+      section
+        h2 Destructuring Assignement
+        br.bullet
+        h3.bullet expression that makes it possible to extract data from arrays or objects using a syntax that mirrors the construction of array and object literals...
+        code.bullet.language-javascript.
+          var [name, surname, age] = ["Giorgio", "Natili", 40];
+          console.log(name, surname, age);
+      section
+        h2 What is a Module?
+        br
+        ul.bullet
+          li In software, a module is a part of a program
+          li Programs are composed of one or more independently developed modules that are combined together trough events or injection
+          li A single module can contain one or several functions
+      section
+        h2 ES6 Modules
+        br
+        ul.bullet
+          li Each module is defined in its own file
+          li The functions or variables defined in a module are not visible outside unless you explicitly export them
+          li The <u>export</u> keyword exports the desired functions
+          li The <u>default</u> keyword indicates that this is a default export and doesn’t require a name 
+      section
+        h2 Syntax
+        br.bullet 
+        code.bullet.language-javascript.
+          // Saved in a file math-utils.js
+          function sum(num1, num2) {
+            return num1 + num2;
+          }
+          export { sum as add };
+        br  
+        code.bullet.language-javascript.
+          // Using the module
+          import {add} from 'math-utils'
+      section
+        h2 About Import and Export
+        br
+        ul.bullet
+          li A module can export multiple things by prefixing their declarations with the keyword export <br />
+            pre
+              code.language-javascript.
+                export const sqrt = Math.sqrt;
+          li The <u>default</u> exported value is the more important and is unique in each module <br />
+            pre
+              code.language-javascript.
+                export default function () { ... };
+          li When importing a module you can decide the variable name to use to store the default export <br />
+            pre
+              code.language-javascript.
+                import _ from from 'underscore';
+      section
+        h2 Import Aliases
+        br
+        ul.bullet
+          li As for the <u>export</u>,imported properties can be aliased (aka <u>as</u>) <br />
+            pre
+              code.language-javascript.
+                import {add as summ} from 'math-utils';
+          li Imported values can be then re-exported with an appropriate alias <br />
+            pre
+              code.language-javascript.
+                import { sum } from 'math-utils';
+                export { sum as add };
+      section
+        h2 Using ECMA6 Today
+        br
+      section
+        h2 Traceur
+        br.bullet
+        h3.bullet Traceur is a JavaScript.next-to-JavaScript-of-today compiler that allows you to use features from the future today...
+      section
+        h2 Babel
+        br.bullet
+        h3.bullet It's the new name of <u>6to5</u>, it's a tool that translates the new ES6 (aka ES2015) syntax to a browser compliant JavaScript... 
+      section 
+        h2 Babel VS Traceur
+        br
+        ul.bullet
+          li Both offer the same ES6 support
+          li Transpiling performances are kinda of the same
+          li Transpiled code performances are pretty similar
+          li Bable transpiled code is more readable
+          li Babel supports JSX (aka ReactJS)
+      section
+        h2 ES6 with JSPM
+        br.bullet
+        pre.bullet
+          code.language-bash.
+            $ npm install live-server -g
+        pre.bullet
+          code.language-bash.
+            $ jspm init
+        pre.bullet
+          code.language-html.
+            &lt;script src="jspm_packages/system.js"&gt;&lt;/script&gt;
+            &lt;script src="config.js"&gt;&lt;/script&gt;
+            &lt;script&gt;
+              System.import('scripts/app');
+            &lt;/script&gt;
+      section
+        h2 Live Demo
+      section
+        h3 Working on Lab 4
+      section.emphatic-text(data-bespoke-backdrop='emphatic')
+        h2 Web Components
+      section
+        h2 Polymer
+      section
+        h2 X-Tag
+      section
+        h2 VanillaJS
       section
         h2 Responsive Slides
         h3 Powered by <a href="https://github.com/markdalgleish/bespoke-scale">bespoke-scale</a>
