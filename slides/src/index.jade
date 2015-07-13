@@ -32,6 +32,9 @@ html
       .jspm {
         background-image: url('images/jspm.png')
       }
+      .webcomponents {
+        background-image: url('images/web-components-best-practices.jpg')
+      }
 
       pre {
         border: 1px solid gray;
@@ -58,8 +61,6 @@ html
           li ECMA6
           li Web Components
           li Routing
-          li Testing
-          li Deploying
       section.emphatic-text(data-bespoke-backdrop='emphatic')
         h2 App Scaffolding
       section(data-bespoke-backdrop='yeoman')
@@ -469,6 +470,36 @@ html
         code.bullet.language-javascript.
           var [name, surname, age] = ["Giorgio", "Natili", 40];
           console.log(name, surname, age);
+      section  
+        h2 Iterators
+        br.bullet
+        h3.bullet Iterators allow iteration over arbitrary objects...
+        pre.bullet
+          code.language-javascript.
+            function RangeIterator(min, max) {
+               this[Symbol.iterator] = function () {
+                  var current = min;
+                  return {
+                    next: function () {
+                      return {
+                        done: /*some conditions */ true,
+                        value: /*the current value */ Math.random()
+                      };
+                    };
+            }
+      section
+        h2 Generators
+        br.bullet
+        h3 With ES6 generators we can pause and resume multiple times the execution of a function...
+        pre.bullet
+          code.language-javascript.
+            function *foo(x) {
+              var y = 2 * (yield (x + 1));
+              var z = yield (y / 3);
+              return (x + y + z);
+            }
+      section
+        h2 ES Modules
       section
         h2 What is a Module?
         br
@@ -568,12 +599,103 @@ html
         h3 Working on Lab 4
       section.emphatic-text(data-bespoke-backdrop='emphatic')
         h2 Web Components
+      section(data-bespoke-backdrop='webcomponents')
+        h2 Web Components
+        h3 A collection of best practices and reusable code...
+      section
+        h2 In a Nutshell
+        br.bullet
+        h3.bullet In a nutshell, they allow us to bundle markup and styles into custom HTML elements...
+        br
+        img.bullet(src='images/webcomponents.png' style='width: 380px; height: 443px;')
+      section
+        h2 Browser Support
+        br.bullet
+        img.bullet(src='images/browser-support.png')
+      section
+        h2 Surprised?
+        br.bullet
+        img.bullet(src='images/surprised.gif')
+      section
+        h2 Shadow Dom
+        br.bullet
+        h3.bullet It's the DOM inside a widget, encapsulated from the rest of the page in order to prevent conflicts...
+        ul.bullet
+          li It offers CSS encapsulation
+          li It doesn't allow the co-existence of different versions of the same library in the same page
       section
         h2 Polymer
+        br.bullet
+        h3.bullet Polymer is a library built on top of the current web components standards for building custom elements...
+        br
+        pre.bullet(style='font-size: 14px;')
+          code.language-html.
+            &lt;dom-module id="hello-world"&gt;
+                &lt;template&gt;
+                  &lt;p&gt;Hello &lt;strong&gt;{{who}}&lt;/strong&gt; :)&lt;/p&gt;
+                &lt;/template&gt;
+            &lt;/dom-module&gt;
+        pre.bullet(style='font-size: 14px;')
+          code.language-javascript.
+            Polymer({
+                is: 'hello-world',
+                  properties: {
+                    who: // ....
+        iframe.bullet(src='http://webcomponents.org/hello-world-polymer/bower_components/hello-world-polymer/' style='background-color: white;')
       section
         h2 X-Tag
+        br.bullet
+        h3.bullet It's a JavaScript library created and Maontained by <em>Mozilla</em> that brings Web Components Custom Element to all modern browsers...
+        br
+        pre.bullet(style='font-size: 18px;')
+          code.language-javascript.
+            xtag.register('x-accordion', {
+              // extend existing elements
+                extends: 'div',
+                  lifecycle:{
+                  created: function(), inserted: function(), removed: function()
+        br
+        pre.bullet
+          code.language-html.
+            &lt;hello-world who="Unicorn"&gt;&lt;/hello-world&gt;
       section
         h2 VanillaJS
+        br.bullet
+        pre.bullet(style='font-size: 14px;')
+          code.language-javascript.
+            (function() {
+                // Creates an object based in the HTML Element prototype
+                var element = Object.create(HTMLElement.prototype);
+                    
+                // Fires when an instance of the element is created
+                element.createdCallback = function() {};
+                            
+                // Fires when an instance was inserted into the document
+                element.attachedCallback = function() {};
+                                    
+                // Fires when an instance was removed from the document
+                element.detachedCallback = function() {};
+                                            
+                // Fires when an attribute was added, removed, or updated
+                element.attributeChangedCallback = function(attr, oldVal, newVal) {};
+                                                    
+                // Registers custom element
+                document.registerElement('hello-world', { prototype: element });
+              })
+      section
+        h2 Are you kidding me?
+        br.bullet
+        img.bullet(src='images/kiddingme.gif')
+      section
+        h2 Web Components and Generators
+        br.bullet
+        img.bullet(src='images/yeomanelement.jpg')
+        br
+        p.bullet Install this <a href="https://github.com/webcomponents/generator-element">https://github.com/webcomponents/generator-element</a> interesting <em>yeoman</em> generator...  
+      section
+        h3 Working on Lab 5
+      section.emphatic-text(data-bespoke-backdrop='emphatic')
+        h2 Routing
       section
         h2 Responsive Slides
         h3 Powered by <a href="https://github.com/markdalgleish/bespoke-scale">bespoke-scale</a>
