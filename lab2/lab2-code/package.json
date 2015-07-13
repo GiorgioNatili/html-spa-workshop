@@ -1,5 +1,5 @@
 {
-  "name": "lab2-start",
+  "name": "lab2-finished",
   "version": "0.0.1",
   "repository": "https://github.com/GiorgioNatili/html-spa-workshop",
   "description": "A Mimosa starter skeleton",
@@ -14,5 +14,6 @@
     "errorhandler": "1.1.1"
   },
   "devDependencies": {
+    "express": "^4.7.2"
   }
 }
