@@ -1,0 +1,6 @@
+*.DS_Store
+
+assets/
+node_modules/
+bower_components/
+jspm_modules/
