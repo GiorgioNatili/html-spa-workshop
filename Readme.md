@@ -44,6 +44,11 @@ Following the list of topics covered in the workshop, the ones that will be cove
 ================================
 
 ## Labs
+* Lab 1, scaffolding
+* Lab 2, dependencies 
+* Lab 3, productionize code
+* Lab 4, ES6 modules
+* Lab 5, Polymer 
 
 ================================
 
