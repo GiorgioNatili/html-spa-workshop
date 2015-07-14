@@ -65,7 +65,7 @@ html
         h2 App Scaffolding
       section(data-bespoke-backdrop='yeoman')
         h2 yeoman
-        h3 Kickstart tool that enforces best practices and TDD
+        h3 Kickstart tool that enforces best practices
       section
         h2 Install yeoman
         br
@@ -163,7 +163,7 @@ html
           li Detect circular dependencies
           li Manage common config for multiple modules
       section
-        h2 Hint & Lint
+        h2 Hint &amp; Lint
         br.bullet
         h3.bullet JavaScript files are hinted and CSS files are linted (configurable)
 
@@ -171,7 +171,7 @@ html
         h2 Source Mapping
         br.bullet
         h3.bullet Source mapping is fully supported, and it's possible to add breakpoints in .coffee files and use the standard debugging tools
-  
+
       section
         h2 Create a Web App with Mimosa
         br.bullet
@@ -184,15 +184,14 @@ html
       section(data-bespoke-backdrop='brunch')
         h2 Brunch
         h3 An ultra-fast HTML5 build tool
-      
       section
         h2 What it does
         br.bullet
         ul.bullet
           li Compiles scripts/stylesheets/templates
-          li Lints them
+          li Lints JS and CSS
           li Wraps in Common.js or AMD modules (optional)
-          li Concatenates & minifies
+          li Concatenates &amp; minifies
           li Generates source maps
           li Copies and optimizes image assets
           li Watches for file changes
@@ -213,7 +212,9 @@ html
           li Mimosa offers seprate compile phases for server and client side code
           li Mimosa offers <i>CoffeeScript</i> breakpoints
           li Mimosa allows to override configuration through <u>profiles</u>
-      
+
+      section
+        h3 Working on Lab 1
       section
         h2 What's about Grunt and Gulp?
         br.bullet
@@ -248,13 +249,13 @@ html
         h2 Why is it different?
         br.bullet
         h3.bullet It uses <i>Gulp</i>, it doesn't offer anything out of the box and for this reason is pretty light
-        p(style='font-size:11px').bullet (<i>Highly recommended if you want to have control of every single depndence that you add to your project</i>)
+        p(style='font-size:14px').bullet (<i>Highly recommended if you want to have control of every single depndence that you add to your project</i>)
       section
         h2 Slush Generators
         br.bullet
         h3.bullet A huge list that includes: phonegap, go, Electron, angular, ember, backbone, express, web components, h5bp, ng-next, browserify, bootstrap, etc.
         p.bullet A comprehensive list of slush generators are available <a href='http://slushjs.github.io/generators' target='_blank'>here</a>
-        p(style='font-size:11px').bullet (<i>Slush generators can be installed locally!</i>)
+        p(style='font-size:14px').bullet (<i>Slush generators can be installed locally!</i>)
       section
         h2 Getting Started
         br.bullet
@@ -266,12 +267,12 @@ html
           pre.bullet
             code.language-bash.
               $ slush &lt;generator&gt;[:&lt;tasks&gt;] [&lt;args&gt;]
- 
+
       section
         h2 How to decided which is the right tool?
         br
         img(src='images/confused.gif')
-      
+
       section
         h2 With common sense and deep analysis of your requiremnts
         br.bullet
@@ -282,14 +283,17 @@ html
           li Are you already using tools like <i>ember-cli</i>?
           li Do you already have a test suite?
           li How much active is the project community?
-          
+
+      section
+      h3 Working on Lab 2
+
       section.emphatic-text(data-bespoke-backdrop='emphatic')
         h2 Dependencies Management
-      
+
       section(data-bespoke-backdrop='npm')
         h2 NPM
         h3 Installs, publishes and manages node programs
-      
+
       section
         h2 Node Package Manager
         br.bullet
@@ -320,7 +324,7 @@ html
       section
         h2 The package.json file
         br.bullet
-        pre.bullet
+        pre(style='font-size: 18px;').bullet
           code.language-javascript.
             {
               "name": "test",
@@ -371,9 +375,12 @@ html
         br
         img(src='images/shock.gif')
       section
-        h2 But it's also not the best way
+        h2 It's also not the only way!
         br
         img(src='images/yesyes.gif')
+        
+      section
+        h3 Working on Lab 3
       section(data-bespoke-backdrop='jspm')
         h2 JSPM
         h3 Frictionless browser package management
@@ -423,7 +430,8 @@ html
         h2 The let Keyword
         br.bullet
         h3.bullet Declares a variable local to the block scope...
-        code.bullet.language-javascript.
+        pre.bullet
+          code.language-javascript.
             var x = 1;
             if(x < 10) {
               let v = 1;
@@ -435,46 +443,51 @@ html
         h2 The const Keyword
         br.bullet
         h3.bullet Declares a "variable" that once is set can't change...
-        code.bullet.language-javascript.
-          const username = 'Giorgio';
-          username = 'Jonathan'; // "username" is read-only
+        pre.bullet
+          code.language-javascript.
+            const username = 'Giorgio';
+            username = 'Jonathan'; // "username" is read-only
       section
         h2 Template Strings
         br.bullet
         h3.bullet Concatenates strings and variable wrapping variables in a ${} sign...
-        code.bullet.language-javascript.
-          let name = 'giorgio';
-          let email = 'me@webplatform.io';
-          console.log(`username ${name} and e-mail ${email}`);
+        pre.bullet
+          code.language-javascript.
+            let name = 'giorgio';
+            let email = 'me@webplatform.io';
+            console.log(`username ${name} and e-mail ${email}`);
       section
         h2 Arrow functions
         br.bullet
         h3.bullet It's a shorter form of a function that lexically binds the <em>this</em> value...
-        code.bullet.language-javascript.
-          (param1, param2, paramN) => { statements }
-          (param1, param2, paramN) => expression
+        pre.bullet
+          code.language-javascript.
+            (param1, param2, paramN) => { statements }
+            (param1, param2, paramN) => expression
       section
         h2 Variadic arguments and Default Values
         br.bullet
         h3.bullet Functions can be now defined to explicitly accept a vairable number of arguments and default values...
-        code.bullet.language-javascript.
-          function printAll(...names){
-            for (item of names) {
-              console.log(item);
+        pre.bullet
+          code.language-javascript.
+            function printAll(...names){
+              for (item of names) {
+                console.log(item);
+              }
             }
-          }
       section
         h2 Destructuring Assignement
         br.bullet
-        h3.bullet expression that makes it possible to extract data from arrays or objects using a syntax that mirrors the construction of array and object literals...
-        code.bullet.language-javascript.
-          var [name, surname, age] = ["Giorgio", "Natili", 40];
-          console.log(name, surname, age);
+        h3.bullet Expression that makes it possible to extract data from arrays or objects using a syntax that mirrors the construction of array and object literals...
+        pre.bullet
+          code.language-javascript.
+            var [name, surname, age] = ["Giorgio", "Natili", 40];
+            console.log(name, surname, age);
       section  
         h2 Iterators
         br.bullet
         h3.bullet Iterators allow iteration over arbitrary objects...
-        pre.bullet
+        pre(style='font-size:18px;').bullet
           code.language-javascript.
             function RangeIterator(min, max) {
                this[Symbol.iterator] = function () {
@@ -517,31 +530,33 @@ html
           li The <u>default</u> keyword indicates that this is a default export and doesn’t require a name 
       section
         h2 Syntax
-        br.bullet 
-        code.bullet.language-javascript.
-          // Saved in a file math-utils.js
-          function sum(num1, num2) {
-            return num1 + num2;
-          }
-          export { sum as add };
-        br  
-        code.bullet.language-javascript.
-          // Using the module
-          import {add} from 'math-utils'
+        br.bullet
+        pre.bullet
+          code.language-javascript.
+            // Saved in a file math-utils.js
+            function sum(num1, num2) {
+              return num1 + num2;
+            }
+            export { sum as add };
+        br
+        pre.bullet
+          code.language-javascript.
+            // Using the module
+            import {add} from 'math-utils'
       section
         h2 About Import and Export
         br
         ul.bullet
           li A module can export multiple things by prefixing their declarations with the keyword export <br />
-            pre
+            pre(style='font-size:20px;')
               code.language-javascript.
                 export const sqrt = Math.sqrt;
           li The <u>default</u> exported value is the more important and is unique in each module <br />
-            pre
+            pre(style='font-size:20px;')
               code.language-javascript.
                 export default function () { ... };
           li When importing a module you can decide the variable name to use to store the default export <br />
-            pre
+            pre(style='font-size:20px;')
               code.language-javascript.
                 import _ from from 'underscore';
       section
@@ -624,18 +639,29 @@ html
           li It offers CSS encapsulation
           li It doesn't allow the co-existence of different versions of the same library in the same page
       section
+        h2 Vanilla Shadow Dom
+        br
+        pre
+          code.language-html.
+            &lt;button&gt; Hello, world! &lt;/button&gt;
+            &lt;script&gt;
+            var host = document.querySelector('button');
+            var root = host.createShadowRoot();
+            root.textContent = 'Whatever!';
+            &lt;/script&gt;
+      section
         h2 Polymer
         br.bullet
-        h3.bullet Polymer is a library built on top of the current web components standards for building custom elements...
+        h3.bullet Polymer is a library inspired by the current web components standards for building custom elements...
         br
-        pre.bullet(style='font-size: 14px;')
+        pre.bullet(style='font-size: 12px;')
           code.language-html.
             &lt;dom-module id="hello-world"&gt;
                 &lt;template&gt;
                   &lt;p&gt;Hello &lt;strong&gt;{{who}}&lt;/strong&gt; :)&lt;/p&gt;
                 &lt;/template&gt;
             &lt;/dom-module&gt;
-        pre.bullet(style='font-size: 14px;')
+        pre.bullet(style='font-size: 12px;')
           code.language-javascript.
             Polymer({
                 is: 'hello-world',
@@ -650,7 +676,7 @@ html
         pre.bullet(style='font-size: 18px;')
           code.language-javascript.
             xtag.register('x-accordion', {
-              // extend existing elements
+                // extend existing elements
                 extends: 'div',
                   lifecycle:{
                   created: function(), inserted: function(), removed: function()
@@ -689,12 +715,12 @@ html
       section
         h2 Web Components and Generators
         br.bullet
-        img.bullet(src='images/yeomanelement.jpg')
+        img.bullet(src='images/yeomanelement.jpg' style='width:400px')
         br
         p.bullet Install this <a href="https://github.com/webcomponents/generator-element">https://github.com/webcomponents/generator-element</a> interesting <em>yeoman</em> generator...  
       section
         h3 Working on Lab 5
-        h6 Explore the world of custom tasg <a href="https://customelements.io/">https://customelements.io/</a>!
+        h6 (And explore the world of custom tasg <a href="https://customelements.io/">https://customelements.io/</a>!)
       section.emphatic-text(data-bespoke-backdrop='emphatic')
         h2 Routing
       section
@@ -707,7 +733,7 @@ html
       section
         h2 Application State
         br.bullet
-        h3.bullet The application state is mostly persisted in the client through information fragments used by the server to rebuild tge actual state...
+        h3.bullet The application state is mostly persisted in the client through information fragments used by the server to rebuild the actual state...
       section
         h2 Don't reinvent the wheel!
         br
@@ -719,14 +745,33 @@ html
             p(style='font-size:14px') (ok, that's a micro framework it doesn't count!)
       section
         h2 PageJS
-        h3 Powered by <a href="https://github.com/markdalgleish/bespoke-scale">bespoke-scale</a>
+        br
+        pre.bullet(style='font-size=14px') Navigation 
+          code.language-javascript.
+            page(path);
+        pre.bullet(style='font-size=14px') Matching paths<br />
+          code.language-javascript.
+            page('/about', callback);
+        pre.bullet(style='font-size=14px') Bindings <br />
+          code.language-javascript.
+            page([click|popstate|dispatch|hashbang])
+        p.bullet(style='font-size=12px') (Routes are passed Context objects, these may be used to share state)
       section
         h2 Director
-        h3.bullet Powered by <a href="https://github.com/markdalgleish/bespoke-bullets">bespoke-bullets</a>
-        ul
-          li Bullet 1
-          li Bullet 2
-          li Bullet 3
+        br
+        pre(style='font-size:14px').bullet Routing Events <br />
+          code.language-javascript.
+            on, before, after, once
+        pre(style='font-size:14px').bullet Scoped Routing <br />
+          code.language-javascript.
+            // Create routes inside the `users` scope.
+            router.path(/\/users\/(\w+)/, function () {
+        pre(style='font-size:14px').bullet Wildcard Routes <br />
+          code.language-javascript.
+            router.on("/foo/?((\w|.)*)"), function (path) { });
+        pre(style='font-size:14px').bullet Async Routes <br />
+          code.language-javascript.
+            var router = new director.http.Router().configure({ async: true });
       section
         h2 Isn't this interesting?
         br
@@ -743,6 +788,8 @@ html
         br
         h3 A technology should be used if it's the right tool to address product needs - not because it's our favorite tool...
       section
+        br
+        h3 An HTML5 based app can be wrapped as a native app in platforms like Android, iOS, Firefox OS, Windows and can be used with <u>Electron</u> to build destop apps...
         h2 That's it
         br
         img(src='images/thanks.gif')
