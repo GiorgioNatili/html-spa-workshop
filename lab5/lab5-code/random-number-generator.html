@@ -8,7 +8,7 @@
         }
     </style>
     <template>
-        <h1>{{}}</h1>
+        <h1>{{getRandomNumber()}}</h1>
     </template>
 </dom-module>
 
@@ -17,5 +17,8 @@
 
 Polymer({
     is: 'random-number-generator',
+    getRandomNumber: function() {
+        return Math.floor((Math.random()*50)+1).toString();
+    }
 });
 </script>
