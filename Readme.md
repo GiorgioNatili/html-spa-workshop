@@ -16,7 +16,7 @@ CSS
 
 Lab 1: Install the required dependencies and, using your favorite scaffolding tool, create an HTML5 application (H5BP) and run it in your browser. Once the app is running open the browser developer tool and explore the sources.
 
-Lab 2: Using the previously created app, add jquery as a dependency and  create a left navigation menu that when clicked is able to render different views.
+Lab 2: Using the previously created app, add jquery and bootstrap-css as a dependency and  create a left navigation menu that when clicked is able to render different views.
 
 Lab 3: Using the help embedded in your command line build the current app in order to have the code productionized and ready to be publish. 
 
