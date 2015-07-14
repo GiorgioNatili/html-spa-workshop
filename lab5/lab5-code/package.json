@@ -1,0 +1,24 @@
+{
+  "name": "lab5-code",
+  "version": "1.0.0",
+  "description": "Sample usage of Polymer",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "polyserve": "^0.4.0"
+  },
+  "devDependencies": {
+    "polyserve": "^0.4.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GiorgioNatili/html-spa-workshop/tree/master/lab5"
+  },
+  "author": "Giorgio Natili",
+  "license": "ISC"
+}
