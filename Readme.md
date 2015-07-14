@@ -51,17 +51,29 @@ Following the list of topics covered in the workshop, the ones that will be cove
 
 ### App Scaffolding
 http://yeoman.io/generators/
+
 http://www.barbarianmeetscoding.com/blog/2014/12/22/barbaric-development-toolbox-elevate-your-front-end-workflow-with-yeoman/
+
 https://github.com/h5bp/generator-h5bp
+
 https://github.com/larsonjj/generator-yeogurt
+
 http://blog.nodejitsu.com/npmawesome-eight-fun-to-use-yeoman-generators/
+
 http://mimosa.io/started.html#new
+
 https://github.com/dbashford/mimosa/
+
 http://slidedeck.io/aheuermann/brunch-presentation
+
 https://github.com/dbashford/mimosa.io/tree/gh-pages
+
 https://github.com/yeoman/yo
+
 https://github.com/yeoman/generator-webapp
+
 https://groups.google.com/forum/#!topic/mimosajs/wOvzpvFmyHQ
+
 
 ### Dependencies Management
 http://stackoverflow.com/questions/25416813/package-manager-bower-vs-jspm
