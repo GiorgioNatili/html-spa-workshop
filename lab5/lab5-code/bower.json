@@ -1,0 +1,19 @@
+{
+  "name": "random-number-generator",
+  "version": "0.0.0",
+  "description": "My awesome random-number-generator",
+  "license": "MIT",
+  "main": "random-number-generator.html",
+  "keywords": [
+    "polymer",
+    "web-components"
+  ],
+  "ignore": [
+    "**/.*",
+    "bower_components"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0",
+    "web-component-tester": "~3.2.0"
+  }
+}
